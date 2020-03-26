@@ -18,6 +18,16 @@ const Header = () => (
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
+    <style jsx>{`
+      div {
+        font-family: 'Roboto';
+      }
+
+      a {
+        marginRight: 15px;
+        hover: rgba(0,0,0,.5);
+      }
+    `}</style>
     </div>
 );
 
