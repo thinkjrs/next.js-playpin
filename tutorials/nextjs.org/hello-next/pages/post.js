@@ -62,13 +62,13 @@ import fetch from 'isomorphic-unfetch';
 //};
 //
 //export default Page;
-const Post = props => (
+const Post = props => {
   <Layout>
     <h1>{props.shows.name}</h1>
     <p>{props.shows.summary.replace(/<[/]?[pb]>/g,'')}</p>
     {props.show.image ? <img src={props.show.image.medium} /> : null}
   </Layout>
-);
+};
 
 Post.getInitialProps = async function(context) {
   const { id } = context.query;
