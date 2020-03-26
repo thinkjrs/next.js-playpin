@@ -5,7 +5,7 @@
  */
 
 import Link from 'next/link'; // Client-side navigation
-import Header from '../comps/Header';
+import Header from '../components/Header';
 
 export default function Index() {
     return (
