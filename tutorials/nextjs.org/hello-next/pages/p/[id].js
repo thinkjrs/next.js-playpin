@@ -5,7 +5,7 @@
 import { useRouter } from 'next/router';
 import Layout from '../../components/DefaultLayout';
 import fetch from 'isomorphic-unfetch';
-
+import Markdown from 'react-markdown';
 //const Content = () => {
 //  const router = useRouter();
 //  return (
@@ -30,9 +30,57 @@ import fetch from 'isomorphic-unfetch';
 const Post = props => (
     //const router = useRouter();
     <Layout>
-      <h1>{props.show.name}</h1>
-      <p>{props.show.summary.replace(/<[/]?[pb]>/g,'')}</p>
-      {props.show.image ? <img src={props.show.image.medium} /> : null}
+      <div className="show">
+        <div className="show-detail">
+          <h1>{props.show.name}</h1>
+          <p>{props.show.summary.replace(/<[/]?[pb]>/g,'')}</p>
+        </div>
+        <div className="show-image">
+          {props.show.image ? <img src={props.show.image.medium} /> : null}
+        </div>
+      </div>
+      <style jsx>{`
+        h1,
+        a {
+            font-family: 'Arial';
+        }
+        
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style:none;
+            margin: 5px 0;
+        }
+
+        p {
+            font-family: 'Roboto';
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        .show-detail {
+            max-width: 57vw;
+            text-align: left;
+        }
+        .show-image {
+            margin: auto;
+        }
+        .show-image, img {
+            height: 50%;
+        }
+        img {
+            border: 8px solid rgba(100,100,100,.5);
+            border-radius: 4px;
+        }
+        .show {
+            display: flex;
+        }
+      `}</style>
+              
     </Layout>
   );
   
