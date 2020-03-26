@@ -10,7 +10,7 @@ export default function Index() {
     return (
         <Layout>
           <h1>Hello, world!</h1>
-          <p><small><code>With Next.js.</code></small></p>
+          <p><small><code>Using Next.js.</code></small></p>
         </Layout>
     );
 }
