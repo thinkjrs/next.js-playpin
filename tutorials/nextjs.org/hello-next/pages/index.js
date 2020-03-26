@@ -4,15 +4,13 @@
  *
  */
 
-import Link from 'next/link'; // Client-side navigation
-import Header from '../components/Header';
+import Layout from '../components/DefaultLayout';
 
 export default function Index() {
     return (
-        <div>
-          <Header />
+        <Layout>
           <h1>Hello, world!</h1>
           <p><small><code>With Next.js.</code></small></p>
-        </div>
+        </Layout>
     );
 }
